@@ -6,4 +6,4 @@
 ![Challenges we ran into](/assets/Titles/Challenges.png)
 ![Accomplishments we made](/assets/Titles/Accomplishments.png)
 ![What we learned](/assets/Titles/WhatWeLearned.png)
-![What's next for Com-mui](/assets/Titles/WhatsNext.png)
+![What's next for Com-muni](/assets/Titles/WhatsNext.png)
