@@ -38,20 +38,19 @@ body{
 }
 
 #navbar{
-    background-color: #3A4D80;
-    position: fixed;
-    top:0px;
+    position: sticky;
     width: 100%;
-    transition: top 0.3s;
+    padding-top: 10px;
+    padding-bottom: 15px;
     color:white;
-    padding-right: 15px;
+    background-color: #3A4D80; 
+    transition: top 0.3s;
+    height: 50px;
 }
 
 #navbar .right{
     margin-right: 25px;
 }
-
-
 
 #navbar li{
     display: block;
@@ -91,6 +90,7 @@ body{
     width:25vw;
     z-index: 1;
 }
+
 .landing-side h1{
     font-family: 'SemplicitaProB';
     font-size: 1.75em;
@@ -121,7 +121,6 @@ body{
     width: 6em;
     border: none;
     height: 2.5em;
-    margin-right: 10px;
     border-radius: 10px;
     font-size:1em;
     font-family: 'SemplicitaPro';
@@ -134,14 +133,42 @@ body{
 }
 
 .postspage{
-    padding-top: 75px;
+    background-color: #617199;
+    overflow: auto;
+}
+
+.posts{
     background-color: #617199;
 }
 
+.postbox{
+    position: relative;
+    float: left;
+    margin-left: 23px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+    width: 30vw;
+    height: 30vw;
+    z-index: 0;
+}
+
+.postbox .postext{
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.postbox .username{
+    position: absolute;
+    bottom: 10px;
+}
+
+
 .sticky {
-    position: fixed;
-    top:0;
-    width: 100%;
+    position: fixed !important;
+    top:0 !important;
+    bottom:auto;
+    background-color: #3A4D80;
+    z-index: 1;
 }
 
 #smiley {

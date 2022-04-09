@@ -1,138 +1,73 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <!--
+<html>
+
+<head>
+    <!--
             SWEHACKS 22 Project 
             Communi: Find your missed connection!
         -->
-        <meta charset="UFT-8"/>
-    </head>
-    <title>Communi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <link rel="icon" href="assets/Icon.png" sizes="16x16" type="image/png">
-    </head>
-    <body>
-        <nav id = "navbar">
-            <ul class = "left">
-                <li><img id="smiley" src="assets/Smiley White.png" width = "40px" height="auto"/></li>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "about.html">About</a></li>
-            </ul>
-            <ul class="right">
-                <li><img id="notifs" src="assets/Bell White.png" width="30px"/></li>
-                <li><img id="profile" src="assets/User White.png" width="30px"/></li>
-            </ul>
-        </nav>
-    <div class = "landing">
-        <img class = "wave" src="assets/Asset 3Wave.png">
-        <img class = "people" src = "assets/Landing@4x.png">
-        <div class = "landing-side">
-            <img class = "logo" src="assets/Asset 1color.png">
-            <h1 class = "tagline">
+    <meta charset="UFT-8" />
+</head>
+<title>Communi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet">
+<link rel="icon" href="assets/Icon.png" sizes="16x16" type="image/png">
+</head>
+
+<body>
+    <div class="landing">
+        <img class="wave" src="assets/Asset 3Wave.png">
+        <img class="people" src="assets/Landing@4x.png">
+        <div class="landing-side">
+            <img class="logo" src="assets/Asset 1color.png">
+            <h1 class="tagline">
                 Find missed connections, build a community.
             </h1>
-            <p class = "blurb">Ever see someone in your favorite coffee shop 
-                but don't have the guts to talk to them? 
-                Or you exchanged words with a stranger at the grocery store 
-                but still want to get to know them better? Find your missed 
+            
+            <p class="blurb">Ever see someone in your favorite coffee shop
+                but don't have the guts to talk to them?
+                Or you exchanged words with a stranger at the grocery store
+                but still want to get to know them better? Find your missed
                 connections using Com-muni today.</p>
             <button class="login" onclick="window.location.href='login.html';">LOGIN</button>
-            <a href = "#postspage">see the posts</a>
+            <a href="#postspage">see the posts</a>
+        </div>
+    </div>
+
+    <div class="postspage" id="postspage">
+        <nav id="navbar">
+            <ul class="left">
+                <li><img id="smiley" src="assets/Smiley White.png" width="40px" height="auto" /></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <ul class="right">
+                <li><img id="notifs" src="assets/Bell White.png" width="30px" /></li>
+                <li><img id="profile" src="assets/User White.png" width="30px" /></li>
+            </ul>
+        </nav>
+        </br>
+
+        <div class="postbox">
+            <div class="postext">
+                <h1 class="posthead">
+                    This is a title!
+                </h1>
+                <p class="text">
+                    This is a post!
+                </p>
+
+                <div class="username">
+                    <p>Username</p>
+                </div>
+            </div>
         </div>
 
-       
-
     </div>
-    <div class = "postspage" id="postspage">
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-    <p>
-    </p>
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-    <div class = "postbox">
-        <div class = "userinfo">
-            <img class="pfp"/>
-            <p>Username</p>
-        </div>
-        <p>
-            This is a post!
-        </p>
-    </div>
-</div>
 </body>
 <script>
     // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {myFunction()};
+    window.onscroll = function () { myFunction() };
 
     // Get the navbar
     var navbar = document.getElementById("navbar");
@@ -148,5 +83,6 @@
             navbar.classList.remove("sticky");
         }
     }
-    </script>
+</script>
+
 </html>
