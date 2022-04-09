@@ -146,9 +146,11 @@ body{
     float: left;
     margin-left: 23px;
     margin-bottom: 20px;
-    background-color: aliceblue;
+    background-image: url("assets/Asset 1Blue.png");
     width: 30vw;
     height: 30vw;
+    background-size: contain;
+    background-repeat: no-repeat;
     z-index: 0;
 }
 
@@ -159,7 +161,17 @@ body{
 
 .postbox .username{
     position: absolute;
-    bottom: 10px;
+    bottom: 2px;
+}
+
+.postbox .posthead{
+    font-size:2em;
+    font-family: 'SemplicitaProB';
+    line-height: 15px;
+}
+
+.postbox .text{
+    font-size:1.25em;
 }
 
 
