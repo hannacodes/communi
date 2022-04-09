@@ -1,0 +1,37 @@
+@font-face {
+    font-family: SemplicitaPro;
+    src: url("semplicitapro/SempllicitaPro-Bold.otf");
+    font-style: bold;
+}
+
+@font-face {
+    font-family: SemplicitaPro;
+    src: url("semplicitapro/SempllicitaPro-BoldItalic.otf");
+    font-style: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: SemplicitaPro;
+    src: url("semplicitapro/SempllicitaPro-Italic.otf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: SemplicitaPro;
+    src: url("semplicitapro/SempllicitaPro.otf");
+    font-style: normal;
+    
+}
+
+*{
+    font-family: 'SemplicitaPro', sans-serif;
+    font-style: normal;
+    list-style: none;
+    padding: 0;
+}
+
+body{
+    display: block;
+    margin-left: 2%;
+}
