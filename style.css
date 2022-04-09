@@ -135,7 +135,7 @@ body{
 .postspage{
     background-color: #617199;
     overflow: auto;
-}
+}   
 
 .posts{
     background-color: #617199;
@@ -186,4 +186,27 @@ body{
 #smiley {
     padding-bottom: 10px;
     padding-right: 5px;
+}
+
+.loginscreen{
+    position: absolute;
+    background-color: white;
+    width: 30vw;
+    left:10vw;
+    top:14vh;
+    padding-bottom: 30px;
+    border-radius: 20px;
+}
+
+.loginimage{
+    position: absolute;
+    width: 50vw;
+    max-width: 800px;
+    bottom: 10vh;
+    right: 0;
+
+}
+
+.logintext{
+    margin-left: 20px;
 }
