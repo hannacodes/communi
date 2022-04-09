@@ -1,1 +1,1 @@
-![Com-muni](/assets/Asset 1MainTitle.png)
+![Com-muni](/communi/assets/Asset 1MainTitle.png)
