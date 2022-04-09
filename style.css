@@ -204,7 +204,7 @@ body{
     position: absolute;
     width: 50vw;
     max-width: 800px;
-    bottom: 10vh;
+    bottom: 5vh;
     right: 0;
 
 }
@@ -217,4 +217,65 @@ body{
     background-color: #617199;
 }
 
+.loginscreen .title h1 {
+    padding-top: 30px;
+    font-family: 'SemplicitaProB';
+    line-height: 10px;
+}
+
+.loginscreen .email h2, .loginscreen .password h2 {
+    font-family: 'SemplicitaProB';
+    font-size: 1em;
+    line-height: 10px;
+    padding-top: 15px ;
+}
+
+.loginscreen .email input[type="text" i], .password input[type="password"]{
+    width: 28vw;
+    border-color: white;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    height: 30px;
+}
+
+.loginscreen .rememberme {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.loginscreen .loginbutton {
+    font-family: 'SemplicitaProB';
+    width: 28vw;
+    text-align: center;
+    background-color: #EF5084;
+    color:white;
+    border-radius: 2;
+    border: none;
+    height: 40px;
+}
+
+::placeholder{
+    padding-left:10px;
+}
+
+.loginscreen .title a{
+    color:#EF5084;
+    text-decoration: none;
+    font-family: 'SemplicitaProB';
+}
+
+.loginscreen .password a {
+    color:#EF5084;
+    text-decoration: none;
+    text-align: right;
+    padding-left: 5px;
+    font-size:12px;
+}
+
+.loginbody .close {
+    position:absolute;
+    top:50px;
+    left:50px;
+    width: 3vw;
+}
 
