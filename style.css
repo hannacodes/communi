@@ -1,25 +1,25 @@
 @font-face {
     font-family: SemplicitaPro;
-    src: url("semplicitapro/SempllicitaPro-Bold.otf");
+    src: url("semplicitapro/SemplicitaPro-Bold.otf");
     font-style: bold;
 }
 
 @font-face {
     font-family: SemplicitaPro;
-    src: url("semplicitapro/SempllicitaPro-BoldItalic.otf");
+    src: url("semplicitapro/SemplicitaPro-BoldItalic.otf");
     font-style: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: SemplicitaPro;
-    src: url("semplicitapro/SempllicitaPro-Italic.otf");
+    src: url("semplicitapro/SemplicitaPro-Italic.otf");
     font-style: italic;
 }
 
 @font-face {
     font-family: SemplicitaPro;
-    src: url("semplicitapro/SempllicitaPro.otf");
+    src: url("semplicitapro/SemplicitaPro.otf");
     font-style: normal;
     
 }
@@ -33,5 +33,28 @@
 
 body{
     display: block;
-    margin-left: 2%;
+    width: 99%;
+}
+
+#navbar{
+    background-color: white;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    transition: top 0.3s;
+}
+
+#navbar li{
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.landing{
+    top: -1px;
+    position: relative;
+    height: 100vh;
+    background-color: #00A1D0;
 }
