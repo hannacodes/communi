@@ -1,5 +1,5 @@
 @font-face {
-    font-family: SemplicitaPro;
+    font-family: SemplicitaProB;
     src: url("semplicitapro/SemplicitaPro-Bold.otf");
     font-style: bold;
 }
@@ -60,7 +60,32 @@ body{
 }
 
 .landing-side{
+    position: absolute;
     margin-left: 7%;
-    padding-top: 15%;
-    width:30vh;
+    padding-top: 5%;
+    width:25vw;
+    z-index: 1;
+}
+.landing-side h1{
+    font-family: 'SemplicitaProB';
+    font-size: 1.75em;
+}
+
+.wave{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    bottom: 0px;
+    z-index: 0;
+}
+
+.people{
+    position: absolute;
+    height: 60%;
+    right: 100px;
+    bottom: 100px
+}
+
+.login{
+    
 }
