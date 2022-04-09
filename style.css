@@ -34,22 +34,47 @@
 body{
     display: block;
     width: 99%;
+    background-color: #3A4D80;
 }
 
 #navbar{
-    background-color: white;
+    background-color: #3A4D80;
     position: fixed;
     top:0px;
     width: 100%;
     transition: top 0.3s;
+    color:white;
+    padding-right: 15px;
 }
 
+#navbar .right{
+    margin-right: 25px;
+}
+
+
+
 #navbar li{
-    float: left;
     display: block;
     text-align: center;
     text-decoration: none;
     padding-left: 15px;
+    color: white;
+}
+
+#navbar a{
+    color:white;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#navbar .left li{
+    float: left;
+}
+
+#navbar .right li{
+    float: right;
+    padding-right: 10px;
 }
 
 .landing{
@@ -81,9 +106,14 @@ body{
 
 .people{
     position: absolute;
-    height: 60%;
-    right: 100px;
-    bottom: 100px
+    width: 50vw;
+    right: 10vw;
+    max-width: 800px;
+    bottom: 15vh;
+}
+
+.logo{
+    width: 30vw;
 }
 
 .login{
@@ -101,4 +131,20 @@ body{
 .landing-side a{
     color: #00A1D0;
     text-decoration: none;
+}
+
+.postspage{
+    padding-top: 75px;
+    background-color: #617199;
+}
+
+.sticky {
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+
+#smiley {
+    padding-bottom: 10px;
+    padding-right: 5px;
 }

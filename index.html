@@ -14,19 +14,21 @@
     </head>
     <body>
         <nav id = "navbar">
-            <ul>
-                <li><img class="logo" src="assets/Main Logo.png" width="300px" height="auto"/></li>
+            <ul class = "left">
+                <li><img id="smiley" src="assets/Smiley White.png" width = "40px" height="auto"/></li>
+                <li><a href = "index.html">Home</a></li>
                 <li><a href = "about.html">About</a></li>
-                <li><a href = "viewprofile.html">View Profile</a></li>
-                <li><a href = "signin.html">Sign In</a></li>
-                <li><input type="search"></li>
+            </ul>
+            <ul class="right">
+                <li><img id="notifs" src="assets/Bell White.png" width="30px"/></li>
+                <li><img id="profile" src="assets/User White.png" width="30px"/></li>
             </ul>
         </nav>
     <div class = "landing">
         <img class = "wave" src="assets/Asset 3Wave.png">
-        <img class = "people" src = "assets/Asset 1landing.png">
+        <img class = "people" src = "assets/Landing@4x.png">
         <div class = "landing-side">
-            <img class = "logo" src="assets/Asset 1color.png" width="400vw" height="auto">
+            <img class = "logo" src="assets/Asset 1color.png">
             <h1 class = "tagline">
                 Find missed connections, build a community.
             </h1>
@@ -35,7 +37,7 @@
                 Or you exchanged words with a stranger at the grocery store 
                 but still want to get to know them better? Find your missed 
                 connections using Com-muni today.</p>
-            <button class="login">LOGIN</button>
+            <button class="login" onclick="window.location.href='login.html';">LOGIN</button>
             <a href = "#postspage">see the posts</a>
         </div>
 
@@ -129,17 +131,22 @@
 </div>
 </body>
 <script>
-    // When the user scrolls down 20px from the top of the document, slide down the navbar
-    // When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
-    window.onscroll = function() {scrollFunction()};
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
 
-    function scrollFunction() {
-        let nav = document.getElementsById("navbar");
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementsById("navbar").style.top = "0";
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
         } else {
-            document.getElementsById("navbar").style.top = "-75px";
+            navbar.classList.remove("sticky");
         }
     }
-</script>
+    </script>
 </html>
