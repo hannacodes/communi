@@ -151,11 +151,8 @@ body{
     float: left;
     margin-left: 23px;
     margin-bottom: 20px;
-    background-image: url("assets/Asset 1Blue.png");
     width: 30vw;
     height: 30vw;
-    background-size: contain;
-    background-repeat: no-repeat;
     z-index: 0;
 }
 
@@ -317,5 +314,29 @@ body{
     width: 42vw;
     right: 10vw;
     max-width: 550px;
-    bottom: 10vh;
+    top:20vh;
+}
+
+#blue{
+    background-image: url("assets/Asset 1Blue.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#purple{
+    background-image: url("assets/Asset 3Purple.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#pink{
+    background-image: url("assets/Asset 1Pink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#yellow{
+    background-image: url("assets/Asset 2Yellow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
