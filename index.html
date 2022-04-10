@@ -63,7 +63,6 @@
         </div>
         <div class="actualposts">
         </div>
-
         <img id="createpost" onclick="createpost();" src="assets/Asset 2Icons.png" width="70px">
         <div class="colorbuttons">
             <img onclick="postcolor('pink');" src="assets/Ellipse 2Color Dots.png" id="pinkico">
@@ -80,7 +79,7 @@
     function addPost(thread) {
         var container = document.querySelector('.actualposts');
         var html = `
-        <div class="postbox" id=${thread.color}>
+        <div class="postbox" id=${thread.color} onclick="openoverlay(${thread.count})">
             <div class="postext">
                 <h1 class="posthead">
                     To: ${thread.title}
@@ -95,6 +94,27 @@
                 <br>
                 <br>
                 </div>
+            </div>
+        </div>
+        <div class = "overlay" id = "div${thread.count}">
+            <span class="closebtn" onclick="closeoverlay(${thread.count}); window.onscroll = function () { myFunction() };"><img id="close" src="assets/X White.png" width="30px"></span>
+            <div class = "wrapper">
+                <div class = "content">
+                <h2>
+                    RE: ${thread.title}
+                </h2>
+                <p>
+                    To: ${thread.author}
+                </p>
+                <p>
+                    From: Anonymous
+                </p>
+                <textarea class = "textareamessage" placeholder="Type your message here..." rows="5" cols="40"></textarea>
+                <div class = "bottombtns">
+                <a href = ''>Save Draft</a>
+                <button id="send">SEND MESSAGE</button>
+                </div>
+            </div>
             </div>
         </div>
         `
@@ -113,7 +133,7 @@
     // Get the navbar
     var navbar = document.getElementById("navbar");
     var postbtn = document.getElementById("createpost");
-    console.log(postbtn)
+    var overlays = document.getElementsByClassName("overlay");
 
     // Get the offset position of the navbar
     var sticky = navbar.offsetTop;
@@ -125,12 +145,38 @@
             postbtn.style.visibility = "visible";
         } else {
             postbtn.style.visibility = "hidden";
+            for( let overlay of overlays ){
+                overlay.style.display = "none";
+            }
         }
         if (window.pageYOffset >= (sticky + 10)) {
             navbar.classList.add("sticky")
         } else {
             navbar.classList.remove("sticky");
         }
+    }
+
+    function openoverlay( count ){
+        overlay = document.getElementById("div"+count);
+        overlay.style.display = "initial";
+        overlay.style.opacity = "1"; 
+        window.onscroll = function(){
+            // Get the current page scroll position
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+  
+        // if any scroll is attempted, set this to the previous value
+            window.onscroll = function() {
+                window.scrollTo(scrollLeft, scrollTop);
+            };
+        };
+    }
+
+    function closeoverlay( count ){
+        overlay = document.getElementById("div"+count);
+        overlay.style.display = "none";
+        overlay.style.opacity = "0";
+        window.onscroll( function(){myFunction()});
     }
 
     function createpost() {
@@ -160,7 +206,8 @@
             text: txt.value,
             author: "Anonymous",
             color: color,
-            timestamp: "on " + new Date(Date.now()).toDateString()
+            timestamp: "on " + new Date(Date.now()).toDateString(),
+            count: 8
         }
         localStorage.setItem('threads', JSON.stringify(threads));
         closeelements();
