@@ -1,5 +1,6 @@
 ![Com-muni](/assets/MainTitle.png)
-Com-muni [cate] [cation] [ty]
+Com-muni [ty] [cate] [cation] 
+
 Created for SWE Hacks 2022, we wanted to create a website that encouraged community and connection. We were inspired by the craigslists thread "Missed Connections", and the anonymous instagram confession accounts from our respective colleges.
 
 ![Features](/assets/Titles/Features.png)
