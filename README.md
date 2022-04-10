@@ -5,7 +5,7 @@ Created for SWE Hacks 2022, we wanted to create a website that encouraged commun
 
 ![Features](/assets/Titles/Features.png)
 This hack contains of two parts, the functional website and the website design. 
-The website design can be found here: https://tinyurl.com/Com-muniWebDesign, and the functional website can be found here: https://com-muni.tech.
+The website design can be found here: https://tinyurl.com/Com-muniWebDesign, and the functional website can be found here: https://www.com-muni.tech.
 The functional website has a landing page, a login page, example posts, and an about page. The web design has the planned vision of all of those pages, as well as animations that show how someone would make a post. 
 
 ![Inspiration](/assets/Titles/Inspiration.png)
