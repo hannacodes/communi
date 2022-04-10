@@ -200,6 +200,7 @@ body{
     position: absolute;
     background-color: white;
     width: 35vw;
+    min-width:320px;
     left:10vw;
     top:14vh;
     padding-bottom: 30px;
@@ -239,6 +240,7 @@ body{
 
 .loginscreen .email input[type="text" i], .password input[type="password"]{
     width: 28vw;
+    min-width: 250px;
     border-color: white;
     box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -253,6 +255,7 @@ body{
 .loginscreen .loginbutton {
     font-family: 'SemplicitaProB';
     width: 28vw;
+    min-width: 250px;
     text-align: center;
     background-color: #EF5084;
     color:white;
@@ -474,6 +477,32 @@ body{
 
     #close{
         left: 250px;
+    }
+
+    .abouttext, .abouttitle{
+        min-width: 350px;
+    }
+
+    .aboutpeople{
+        top:60%;
+        bottom:10px;
+        min-width: 300px;
+    }
+
+    #navbar img{
+        width: 25px;
+    }
+
+     #mail{
+        width: 35px !important;
+    }
+
+    #navbar li{
+        padding-left: 8px;
+    }
+
+    #navbar a{
+        font-size:1em;
     }
 
 }
