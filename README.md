@@ -1,5 +1,7 @@
 ![Com-muni](/assets/MainTitle.png)
+Com-muni [ty] [cate] [cation] 
 
+Created for SWE Hacks 2022, we wanted to create a website that encouraged community and connection. We were inspired by the craigslists thread "Missed Connections", and the anonymous instagram confession accounts from our respective colleges.
 
 ![Features](/assets/Titles/Features.png)
 This hack contains of two parts, the functional website and the website design. 
@@ -17,11 +19,15 @@ The web design was built using Figma, and branding and logos were done in Adobe 
 
 ![Challenges we ran into](/assets/Titles/Challenges.png)
 This was our designer's second time using Figma for interface design, so she had to learn how to use Figma at the same time as learning how to design a website. Prototyping was the hardest part, but she figured it out in the end!
+Our web developer had very little experience with javascript, and with working with a designer. She had to learn javascript, and learn the skills to make the designer's vision a reality!
 
 ![Accomplishments we made](/assets/Titles/Accomplishments.png)
-
+Going into this, we wanted to create both a figma prototype, and a live website. We managed to do both! 
+Our web developer also is incredibly proud of some of the JavaScript that she managed to add into the document, as it allowed for more interactivity within the website itself. This was also her most intensive CSS project, and she learned a lot of CSS along the way. 
 
 ![What we learned](/assets/Titles/WhatWeLearned.png)
 Our graphic designer learned how to use Figma to design and conceptulize a website. Her favorite part was learning how prototyping worked, and she especially enjoyed seeing the animations it created! She also learned how to communicate her vision with her partner.
+Our web developer learned more about JavaScript. She also discovered the nuances of CSS, and of course, learned about working with a designer. 
 
 ![What's next for Com-muni](/assets/Titles/WhatsNext.png)
+As you can see from the figma prototype, we have big plans for Com-muni! In the future, we hope to successfully integrate the mail function, as well as the notifications onto the website, and of course, make the website actually functional. 
