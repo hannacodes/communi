@@ -48,6 +48,16 @@
         </nav>
         </br>
 
+        <div class = "createpostbox">
+            <img id = "close" onclick="location.reload();"src="assets/X White.png" width="30px">
+            <div class = postext>
+                <div class = header>To:</div>
+                    <textarea class = "textareaheader" rows="2" placeholder="Dedicate your message here..."></textarea>
+                <textarea class = "textareabody" rows="4" cols="40" placeholder="Talk about your experiences, why do you want to meet them?"></textarea>
+                <button>POST</button>
+            </div>
+        </div>
+
         <div class="postbox" id="blue">
             <div class="postext">
                 <h1 class="posthead">
@@ -161,9 +171,14 @@
                 </div>
             </div>
         </div>
-
-
-
+        <img id="createpost" onclick="createpost();" src="assets/Asset 1Icons.png" width="70px">
+        <div class = "colorbuttons">
+            <img onclick="postcolor('pink');" src="assets/Ellipse 2Color Dots.png" id="pinkico">
+            <img onclick="postcolor('purple');" src="assets/Ellipse 3Color Dots.png" id="purpleico">
+            <img onclick="postcolor('yellow');" src="assets/Ellipse 4Color Dots.png" id="yellowico">
+            <img onclick="postcolor('blue');" src="assets/Ellipse 5Color Dots.png" id="blueico">
+        </div>
+        
     </div>
 </body>
 <script>
@@ -172,17 +187,40 @@
 
     // Get the navbar
     var navbar = document.getElementById("navbar");
+    var postbtn = document.getElementById("createpost");
+    console.log(postbtn)
 
     // Get the offset position of the navbar
     var sticky = navbar.offsetTop + 10;
 
     // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function myFunction() {
+        if( document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ){
+            postbtn.style.visibility = "visible";
+        } else{
+            postbtn.style.visibility = "hidden";
+        }
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
         } else {
             navbar.classList.remove("sticky");
         }
+    }
+
+    function createpost(){
+        document.getElementById("purpleico").style.display="initial";
+        document.getElementById("pinkico").style.display="initial";
+        document.getElementById("blueico").style.display="initial";
+        document.getElementById("yellowico").style.display="initial";
+
+    }
+
+    function postcolor(color){
+        const postcollect = document.getElementsByClassName("createpostbox");
+        var postbox = postcollect.item(0);
+        postbtn.src = "assets/Asset 2Icons.png"
+        postbox.id = color;
+        postbox.style.display = "initial";
     }
 </script>
 
