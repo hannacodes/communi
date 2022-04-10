@@ -140,12 +140,17 @@
         postbtn.src = "assets/Asset 1Icons.png"
     }
 
-    function postcolor(color){
+    var color;
+
+    function postcolor(colori){
+        color = colori;
         const postcollect = document.getElementsByClassName("createpostbox");
         var postbox = postcollect.item(0);
-        postbox.id = color;
+        postbox.id = colori;
         postbox.style.display = "initial";
-        let btn = document.getElementById('postbtn');
+    }
+
+    let btn = document.getElementById('postbtn');
         btn.addEventListener('click', function()
         {
             var title = document.getElementById("textareahead");
@@ -161,14 +166,18 @@
             addPost(post);
         }
         )
-    }
 
     function closeelements(){
         document.getElementById("purpleico").style.display="none";
         document.getElementById("pinkico").style.display="none";
         document.getElementById("blueico").style.display="none";
         document.getElementById("yellowico").style.display="none";
+        var title = document.getElementById("textareahead");
+        var txt = document.getElementById("textareabody");
+        title.value ="";
+        txt.value="";
         const postcollect = document.getElementsByClassName("createpostbox");
+        
         var postbox = postcollect.item(0);
         postbox.style.display = "none";
         postbtn.src = "assets/Asset 2Icons.png"
