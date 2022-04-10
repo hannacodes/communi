@@ -51,7 +51,8 @@
         </br>
 
         <div class = "createpostbox">
-            <img id = "close" onclick="location.reload();"src="assets/X White.png" width="30px">
+            <span class = "closebtn" onclick="closeelements();">
+            <img id = "close" src="assets/X White.png" width="30px"></span>
             <div class = postext>
                 <div class = header>To:</div>
                     <textarea class = "textareaheader" id="textareahead" rows="2" placeholder="Dedicate your message here..."></textarea>
@@ -62,7 +63,7 @@
         <div class = "actualposts">
         </div>
         
-        <img id="createpost" onclick="createpost();" src="assets/Asset 1Icons.png" width="70px">
+        <img id="createpost" onclick="createpost();" src="assets/Asset 2Icons.png" width="70px">
         <div class = "colorbuttons">
             <img onclick="postcolor('pink');" src="assets/Ellipse 2Color Dots.png" id="pinkico">
             <img onclick="postcolor('purple');" src="assets/Ellipse 3Color Dots.png" id="purpleico">
@@ -136,13 +137,12 @@
         document.getElementById("pinkico").style.display="initial";
         document.getElementById("blueico").style.display="initial";
         document.getElementById("yellowico").style.display="initial";
-
+        postbtn.src = "assets/Asset 1Icons.png"
     }
 
     function postcolor(color){
         const postcollect = document.getElementsByClassName("createpostbox");
         var postbox = postcollect.item(0);
-        postbtn.src = "assets/Asset 2Icons.png"
         postbox.id = color;
         postbox.style.display = "initial";
         let btn = document.getElementById('postbtn');
@@ -157,6 +157,7 @@
                 color: color,
                 timestamp: Date.now().toLocaleString()
             }
+            closeelements();
             addPost(post);
         }
         )
@@ -167,6 +168,10 @@
         document.getElementById("pinkico").style.display="none";
         document.getElementById("blueico").style.display="none";
         document.getElementById("yellowico").style.display="none";
+        const postcollect = document.getElementsByClassName("createpostbox");
+        var postbox = postcollect.item(0);
+        postbox.style.display = "none";
+        postbtn.src = "assets/Asset 2Icons.png"
     }
 </script>
 
