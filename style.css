@@ -112,6 +112,7 @@ body{
 .people{
     position: absolute;
     width: 50vw;
+    min-width: 325px;
     right: 10vw;
     max-width: 800px;
     bottom: 15vh;
