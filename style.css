@@ -308,6 +308,10 @@ body{
     padding-top: 5vh;
 }
 
+.abouttext a {
+    color:#EF5084;
+    text-decoration: none;
+}
 
 .aboutpeople{
     position: absolute;
