@@ -160,8 +160,9 @@
                 text: txt.value,
                 author: "Anonymous",
                 color: color,
-                timestamp: Date.now().toLocaleString()
+                timestamp: "on " + new Date(Date.now()).toDateString()
             }
+            localStorage.setItem('threads', JSON.stringify(threads));
             closeelements();
             addPost(post);
         }
@@ -181,6 +182,14 @@
         var postbox = postcollect.item(0);
         postbox.style.display = "none";
         postbtn.src = "assets/Asset 2Icons.png"
+    }
+
+    var threads;
+    if( localStorage && localStorage.getItem('threads')) {
+        threads = JSON.parse(localStorage.getItem('threads'));
+    } else{
+        threads = defaultThreads;
+        localStorage.setItem('threads', JSON.stringify(defaultThreads));
     }
 </script>
 
