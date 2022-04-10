@@ -153,12 +153,15 @@ body{
     margin-left: 35px;
     margin-bottom: 20px;
     width: 30vw;
+    min-width: 350px;
     height: 30vw;
+    min-height: 350px;
     z-index: 0;
 }
 
 .postbox .postext{
     width: 25vw;
+    min-width: 280px;
     margin-left: 20px;
     padding-top: 10px;
 }
@@ -324,6 +327,7 @@ body{
 }
 
 #blue{
+    
     background-image: url("assets/Asset 1Blue.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -362,7 +366,9 @@ body{
     margin-left: 35px;
     margin-bottom: 20px;
     width: 30vw;
+    min-width: 350px;
     height: 30vw;
+    min-height: 350px;
     z-index: 0;
     transition: top 0.5s;
 }
@@ -404,6 +410,7 @@ body{
 
 .createpostbox .textareabody{
     width: 25vw;
+    min-width: 280px;
     background: transparent;
     border: none;
     font-size:1.25em;
@@ -412,6 +419,7 @@ body{
 .createpostbox .textareaheader{
     font-family: 'SemplicitaProB';
     width: 25vw;
+    min-width: 280px;
     padding-top:5px ;
     background: transparent;
     border: none;
@@ -458,3 +466,13 @@ body{
     right:100px;
 }
 
+@media screen and (max-width:800px) {
+    .landing-side{
+        width: 80vw;
+    }
+
+    #close{
+        left: 250px;
+    }
+
+}

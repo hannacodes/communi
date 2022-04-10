@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!--
             SWEHACKS 22 Project 
@@ -23,7 +22,7 @@
             <h1 class="tagline">
                 Find missed connections, build a community.
             </h1>
-            
+
             <p class="blurb">Ever see someone in your favorite coffee shop
                 but don't have the guts to talk to them?
                 Or you exchanged words with a stranger at the grocery store
@@ -43,40 +42,42 @@
                 <li><a href="#postpage">Posts</a></li>
             </ul>
             <ul class="right">
-                <li><a href = "login.html"><img id ="profile" src="assets/User White.png" width="30px" /></a></li>
+                <li><a href="login.html"><img id="profile" src="assets/User White.png" width="30px" /></a></li>
                 <li><img id="notifs" src="assets/Bell White.png" width="30px" /></li>
-                <li><img id="mail" src="assets/Asset 3mail.png" width = "40px"/></li>
+                <li><img id="mail" src="assets/Asset 3mail.png" width="40px" /></li>
             </ul>
         </nav>
         </br>
 
-        <div class = "createpostbox">
-            <span class = "closebtn" onclick="closeelements();">
-            <img id = "close" src="assets/X White.png" width="30px"></span>
-            <div class = postext>
-                <div class = header>To:</div>
-                    <textarea class = "textareaheader" id="textareahead" rows="2" placeholder="Dedicate your message here..."></textarea>
-                <textarea class = "textareabody" id="textareabody" rows="4" cols="40" placeholder="Talk about your experiences, why do you want to meet them?"></textarea>
+        <div class="createpostbox">
+            <span class="closebtn" onclick="closeelements();">
+                <img id="close" src="assets/X White.png" width="30px"></span>
+            <div class=postext>
+                <div class=header>To:</div>
+                <textarea class="textareaheader" id="textareahead" rows="2"
+                    placeholder="Dedicate your message here..."></textarea>
+                <textarea class="textareabody" id="textareabody" rows="4" cols="40"
+                    placeholder="Talk about your experiences, why do you want to meet them?"></textarea>
                 <button id="postbtn">POST</button>
             </div>
         </div>
-        <div class = "actualposts">
+        <div class="actualposts">
         </div>
-        
+
         <img id="createpost" onclick="createpost();" src="assets/Asset 2Icons.png" width="70px">
-        <div class = "colorbuttons">
+        <div class="colorbuttons">
             <img onclick="postcolor('pink');" src="assets/Ellipse 2Color Dots.png" id="pinkico">
             <img onclick="postcolor('purple');" src="assets/Ellipse 3Color Dots.png" id="purpleico">
             <img onclick="postcolor('yellow');" src="assets/Ellipse 4Color Dots.png" id="yellowico">
             <img onclick="postcolor('blue');" src="assets/Ellipse 5Color Dots.png" id="blueico">
         </div>
-        
+
     </div>
 </body>
-<script src = "data.js"></script>
+<script src="data.js"></script>
 <script>
 
-    function addPost( thread ){
+    function addPost(thread) {
         var container = document.querySelector('.actualposts');
         var html = `
         <div class="postbox" id=${thread.color}>
@@ -96,15 +97,15 @@
                 </div>
             </div>
         </div>
-        ` 
+        `
         container.insertAdjacentHTML('afterbegin', html);
     }
 
     var container = document.querySelector('.postspage');
-    for( let thread of threads ){
+    for (let thread of threads) {
         addPost(thread);
     }
-   
+
 
     // When the user scrolls the page, execute myFunction
     window.onscroll = function () { myFunction() };
@@ -120,9 +121,9 @@
 
     // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function myFunction() {
-        if( document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ){
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             postbtn.style.visibility = "visible";
-        } else{
+        } else {
             postbtn.style.visibility = "hidden";
         }
         if (window.pageYOffset >= (sticky + 10)) {
@@ -132,17 +133,17 @@
         }
     }
 
-    function createpost(){
-        document.getElementById("purpleico").style.display="initial";
-        document.getElementById("pinkico").style.display="initial";
-        document.getElementById("blueico").style.display="initial";
-        document.getElementById("yellowico").style.display="initial";
+    function createpost() {
+        document.getElementById("purpleico").style.display = "initial";
+        document.getElementById("pinkico").style.display = "initial";
+        document.getElementById("blueico").style.display = "initial";
+        document.getElementById("yellowico").style.display = "initial";
         postbtn.src = "assets/Asset 1Icons.png"
     }
 
     var color;
 
-    function postcolor(colori){
+    function postcolor(colori) {
         color = colori;
         const postcollect = document.getElementsByClassName("createpostbox");
         var postbox = postcollect.item(0);
@@ -151,43 +152,42 @@
     }
 
     let btn = document.getElementById('postbtn');
-        btn.addEventListener('click', function()
-        {
-            var title = document.getElementById("textareahead");
-            var txt = document.getElementById("textareabody");
-            var post = {
-                title: title.value,
-                text: txt.value,
-                author: "Anonymous",
-                color: color,
-                timestamp: "on " + new Date(Date.now()).toDateString()
-            }
-            localStorage.setItem('threads', JSON.stringify(threads));
-            closeelements();
-            addPost(post);
-        }
-        )
-
-    function closeelements(){
-        document.getElementById("purpleico").style.display="none";
-        document.getElementById("pinkico").style.display="none";
-        document.getElementById("blueico").style.display="none";
-        document.getElementById("yellowico").style.display="none";
+    btn.addEventListener('click', function () {
         var title = document.getElementById("textareahead");
         var txt = document.getElementById("textareabody");
-        title.value ="";
-        txt.value="";
+        var post = {
+            title: title.value,
+            text: txt.value,
+            author: "Anonymous",
+            color: color,
+            timestamp: "on " + new Date(Date.now()).toDateString()
+        }
+        localStorage.setItem('threads', JSON.stringify(threads));
+        closeelements();
+        addPost(post);
+    }
+    )
+
+    function closeelements() {
+        document.getElementById("purpleico").style.display = "none";
+        document.getElementById("pinkico").style.display = "none";
+        document.getElementById("blueico").style.display = "none";
+        document.getElementById("yellowico").style.display = "none";
+        var title = document.getElementById("textareahead");
+        var txt = document.getElementById("textareabody");
+        title.value = "";
+        txt.value = "";
         const postcollect = document.getElementsByClassName("createpostbox");
-        
+
         var postbox = postcollect.item(0);
         postbox.style.display = "none";
         postbtn.src = "assets/Asset 2Icons.png"
     }
 
     var threads;
-    if( localStorage && localStorage.getItem('threads')) {
+    if (localStorage && localStorage.getItem('threads')) {
         threads = JSON.parse(localStorage.getItem('threads'));
-    } else{
+    } else {
         threads = defaultThreads;
         localStorage.setItem('threads', JSON.stringify(defaultThreads));
     }
