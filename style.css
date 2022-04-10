@@ -505,4 +505,13 @@ body{
         font-size:1em;
     }
 
+    .people{
+        top: 65%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .people{
+        visibility: hidden;
+    }
 }
