@@ -159,6 +159,7 @@ body{
     height: 30vw;
     min-height: 350px;
     z-index: 0;
+    transition: left, 0.5s;
 }
 
 .postbox .postext{
