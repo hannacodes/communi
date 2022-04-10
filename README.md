@@ -1,6 +1,8 @@
 ![Com-muni](/assets/MainTitle.png)
 Com-muni [ty] [cate] [cation] 
 
+[Learn more here!](https://www.figma.com/proto/aGKCzGmvLgl1YETzvTwX75/Communi?page-id=103%3A568&node-id=103%3A570&viewport=241%2C48%2C0.03&scaling=contain&starting-point-node-id=103%3A570)
+
 Created for SWE Hacks 2022, we wanted to create a website that encouraged community and connection. We were inspired by the craigslists thread "Missed Connections", and the anonymous instagram confession accounts from our respective colleges.
 
 ![Features](/assets/Titles/Features.png)
@@ -15,7 +17,7 @@ We were inspired by the infamous Craigslist "missed connections" forum and the a
 Com-muni's goal is to encourage connections. In order to do this, we conceptualized a website that exists in the form of posts. When you post, it posts to a database that allows views to see a title and the post contents, as well as your username at the bottom. When you click on the username of someone who posted, you will be able to send them a message. To view the messages you recieved, click the mail icon in the top right corner. There, you can open the mail and write a reply.
 
 ![How we built it](/assets/Titles/HowWeBuiltIt.png)
-The web design was built using Figma, and branding and logos were done in Adobe Illustrator. The video was done in Adobe After Effects with screenrecordings from Figma and the website, and the website was built with HTML, CSS, and Javascript.
+The web design was built using Figma, and branding and logos were done in Adobe Illustrator. The video was done in Adobe After Effects with screenrecordings from Figma and the website, and the website was built with HTML, CSS, and Javascript. We used GitHub to host the main website, and to share files (especially some of the graphics used in the website) across the country! We used our .tech domain from Domains.com, https://www.com-muni.tech to redirect to the main github pages release, so that we could share our work with our friends!
 
 ![Challenges we ran into](/assets/Titles/Challenges.png)
 This was our designer's second time using Figma for interface design, so she had to learn how to use Figma at the same time as learning how to design a website. Prototyping was the hardest part, but she figured it out in the end!
