@@ -157,6 +157,7 @@ body{
 }
 
 .postbox .postext{
+    width: 25vw;
     margin-left: 20px;
     padding-top: 10px;
 }
@@ -169,7 +170,7 @@ body{
 .postbox .posthead{
     font-size:2em;
     font-family: 'SemplicitaProB';
-    line-height: 15px;
+    line-height: 35px;
 }
 
 .postbox .text{
@@ -180,9 +181,9 @@ body{
 .sticky {
     position: fixed !important;
     top:0 !important;
-    bottom:auto;
     background-color: #3A4D80;
     z-index: 1;
+    transition: top, 0.5s;
 }
 
 #smiley {

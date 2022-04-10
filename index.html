@@ -8,7 +8,7 @@
         -->
     <meta charset="UFT-8" />
 </head>
-<title>Communi</title>
+<title>Com-muni</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="style.css" rel="stylesheet">
 <link rel="icon" href="assets/Icon.png" sizes="16x16" type="image/png">
@@ -62,14 +62,14 @@
         <div class="postbox" id="blue">
             <div class="postext">
                 <h1 class="posthead">
-                    This is a title!
+                    To: Person in my English class
                 </h1>
                 <p class="text">
-                    This is a post!
+                    You smiled at me when I sat down next to you, but I forgot ask for your number! Would love to be friends.
                 </p>
 
                 <div class="username">
-                    <p>Username</p>
+                    <p>From: @KathyL at 10:50 PM</p>
                 </div>
             </div>
         </div>
@@ -77,98 +77,98 @@
         <div class="postbox" id="pink">
             <div class="postext">
                 <h1 class="posthead">
-                    This is a title!
+                    To: Boy at the Coffee shop near Pike's Place
                 </h1>
                 <p class="text">
-                    This is a post!
+                    You were in front of me and ordered a Hot Chocolate and I asked you why you didn't drink coffee.
                 </p>
 
                 <div class="username">
-                    <p>Username</p>
+                    <p>From: @JohnD on April 1st</p>
                 </div>
             </div>
         </div>
         <div class="postbox" id="purple">
             <div class="postext">
                 <h1 class="posthead">
-                    This is a title!
+                    To: Girl who waved at me at the grocery store
                 </h1>
                 <p class="text">
-                    This is a post!
+                    You seemed to think that I was someone you knew before and you looked sad when I didn't wave back. I'm sorry!! You seem like a really sweet person. 
                 </p>
 
                 <div class="username">
-                    <p>Username</p>
+                    <p>From @BeckyD on April 3rd</p>
                 </div>
             </div>
         </div>
         <div class="postbox" id="yellow">
             <div class="postext">
                 <h1 class="posthead">
-                    This is a title!
+                    To: Boy wearing a bright pink hat
                 </h1>
                 <p class="text">
-                    This is a post!
+                    That hat was atrocious but I commend your fashion choices and your bravery. Would love to meet you so I can burn that hat. 
                 </p>
 
                 <div class="username">
-                    <p>Username</p>
+                    <p>From @ElizaL on April 2nd</p>
                 </div>
             </div>
         </div>
         <div class="postbox" id="yellow"> 
             <div class="postext">
                 <h1 class="posthead">
-                    This is a title!
+                    To: Person who walked into lecture late
                 </h1>
                 <p class="text">
-                    This is a post!
+                   Like, really late. I really want to know why you still went to lecture that day.
                 </p>
 
                 <div class="username">
-                    <p>Username</p>
+                    <p>From @YoungJ at 10:20 AM</p>
                 </div>
             </div>
         </div>
         <div class="postbox" id="blue">
             <div class="postext">
                 <h1 class="posthead">
-                    This is a title!
+                    To: Someone wearing sunglasses indoors
                 </h1>
                 <p class="text">
-                    This is a post!
+                    I only have one question for you, why???? - the person who looked at you when you walked in. 
                 </p>
 
                 <div class="username">
-                    <p>Username</p>
+                    <p>From @LucyN on March 31st</p>
                 </div>
             </div>
         </div>
         <div class="postbox" id="purple">
             <div class="postext">
                 <h1 class="posthead">
-                    This is a title!
+                    To: The person bringing a teddy bear to class
                 </h1>
                 <p class="text">
-                    This is a post!
+                    Was it bring your stuffed animal to class day? What class is this and where can I take it!
                 </p>
 
                 <div class="username">
-                    <p>Username</p>
+                    <p>From @AlexS on March 31st</p>
                 </div>
             </div>
         </div>
         <div class="postbox" id="blue">
             <div class="postext">
                 <h1 class="posthead">
-                    This is a title!
+                    To: The girl I saw thrifting a bright yellow shirt
                 </h1>
                 <p class="text">
-                    This is a post!
+                    What are you going to do with that? I hope you're not just going to wear it as is...
                 </p>
 
                 <div class="username">
-                    <p>Username</p>
+                    <p>From @SophieF on March 30th</p>
                 </div>
             </div>
         </div>
@@ -192,7 +192,8 @@
     console.log(postbtn)
 
     // Get the offset position of the navbar
-    var sticky = navbar.offsetTop + 10;
+    var sticky = navbar.offsetTop;
+    console.log(sticky)
 
     // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function myFunction() {
@@ -201,7 +202,7 @@
         } else{
             postbtn.style.visibility = "hidden";
         }
-        if (window.pageYOffset >= sticky) {
+        if (window.pageYOffset >= (sticky + 10)) {
             navbar.classList.add("sticky")
         } else {
             navbar.classList.remove("sticky");
