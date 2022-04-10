@@ -508,10 +508,19 @@ body{
     .people{
         top: 65%;
     }
+
+    .postext .text{
+        font-size: 1.1em;
+    }
+
+    .postext .posthead{
+        font-size:1.7em;
+    }
 }
 
 @media screen and (max-width:350px) {
     .people{
         visibility: hidden;
     }
+
 }
