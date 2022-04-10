@@ -54,128 +54,14 @@
             <img id = "close" onclick="location.reload();"src="assets/X White.png" width="30px">
             <div class = postext>
                 <div class = header>To:</div>
-                    <textarea class = "textareaheader" rows="2" placeholder="Dedicate your message here..."></textarea>
-                <textarea class = "textareabody" rows="4" cols="40" placeholder="Talk about your experiences, why do you want to meet them?"></textarea>
-                <button>POST</button>
+                    <textarea class = "textareaheader" id="textareahead" rows="2" placeholder="Dedicate your message here..."></textarea>
+                <textarea class = "textareabody" id="textareabody" rows="4" cols="40" placeholder="Talk about your experiences, why do you want to meet them?"></textarea>
+                <button id="postbtn">POST</button>
             </div>
         </div>
-
-        <div class="postbox" id="blue">
-            <div class="postext">
-                <h1 class="posthead">
-                    To: Person in my English class
-                </h1>
-                <p class="text">
-                    You smiled at me when I sat down next to you, but I forgot ask for your number! Would love to be friends.
-                </p>
-                <div class = "username">
-                From: 
-                <span class="usertag">@KathyL</span> at 
-                <span class="timestamp">10:30 PM</span>
-                <br>
-                <br>
-                </div>
-            </div>
+        <div class = "actualposts">
         </div>
-
-        <div class="postbox" id="pink">
-            <div class="postext">
-                <h1 class="posthead">
-                    To: Boy at the Coffee shop near Pike's Place
-                </h1>
-                <p class="text">
-                    You were in front of me and ordered a Hot Chocolate and I asked you why you didn't drink coffee.
-                </p>
-
-                <div class="username">
-                    <p>From: @JohnD on April 1st</p>
-                </div>
-            </div>
-        </div>
-        <div class="postbox" id="purple">
-            <div class="postext">
-                <h1 class="posthead">
-                    To: Girl who waved at me at the grocery store
-                </h1>
-                <p class="text">
-                    You seemed to think that I was someone you knew before and you looked sad when I didn't wave back. I'm sorry!! You seem like a really sweet person. 
-                </p>
-
-                <div class="username">
-                    <p>From @BeckyD on April 3rd</p>
-                </div>
-            </div>
-        </div>
-        <div class="postbox" id="yellow">
-            <div class="postext">
-                <h1 class="posthead">
-                    To: Boy wearing a bright pink hat
-                </h1>
-                <p class="text">
-                    That hat was atrocious but I commend your fashion choices and your bravery. Would love to meet you so I can burn that hat. 
-                </p>
-
-                <div class="username">
-                    <p>From @ElizaL on April 2nd</p>
-                </div>
-            </div>
-        </div>
-        <div class="postbox" id="yellow"> 
-            <div class="postext">
-                <h1 class="posthead">
-                    To: Person who walked into lecture late
-                </h1>
-                <p class="text">
-                   Like, really late. I really want to know why you still went to lecture that day.
-                </p>
-
-                <div class="username">
-                    <p>From @YoungJ at 10:20 AM</p>
-                </div>
-            </div>
-        </div>
-        <div class="postbox" id="blue">
-            <div class="postext">
-                <h1 class="posthead">
-                    To: Someone wearing sunglasses indoors
-                </h1>
-                <p class="text">
-                    I only have one question for you, why???? - the person who looked at you when you walked in. 
-                </p>
-
-                <div class="username">
-                    <p>From @LucyN on March 31st</p>
-                </div>
-            </div>
-        </div>
-        <div class="postbox" id="purple">
-            <div class="postext">
-                <h1 class="posthead">
-                    To: The person bringing a teddy bear to class
-                </h1>
-                <p class="text">
-                    Was it bring your stuffed animal to class day? What class is this and where can I take it!
-                </p>
-
-                <div class="username">
-                    <p>From @AlexS on March 31st</p>
-                </div>
-            </div>
-        </div>
-        <div class="postbox" id="blue">
-            <div class="postext">
-                <h1 class="posthead">
-                    To: The girl I saw thrifting a bright yellow shirt
-                </h1>
-                <p class="text">
-                    What are you going to do with that? I hope you're not just going to wear it as is...
-                </p>
-
-                <div class="username">
-                    <p>From @SophieF on March 30th</p>
-                </div>
-            </div>
-        </div>
+        
         <img id="createpost" onclick="createpost();" src="assets/Asset 1Icons.png" width="70px">
         <div class = "colorbuttons">
             <img onclick="postcolor('pink');" src="assets/Ellipse 2Color Dots.png" id="pinkico">
@@ -186,10 +72,39 @@
         
     </div>
 </body>
-<script src = "data.js">
-    
-</script>
+<script src = "data.js"></script>
 <script>
+
+    function addPost( thread ){
+        var container = document.querySelector('.actualposts');
+        var html = `
+        <div class="postbox" id=${thread.color}>
+            <div class="postext">
+                <h1 class="posthead">
+                    To: ${thread.title}
+                </h1>
+                <p class="text">
+                    ${thread.text}
+                </p>
+                <div class = "username">
+                From: 
+                <span class="usertag">${thread.author}</span>
+                <span class="timestamp">${thread.timestamp}</span>
+                <br>
+                <br>
+                </div>
+            </div>
+        </div>
+        ` 
+        container.insertAdjacentHTML('afterbegin', html);
+    }
+
+    var container = document.querySelector('.postspage');
+    for( let thread of threads ){
+        addPost(thread);
+    }
+   
+
     // When the user scrolls the page, execute myFunction
     window.onscroll = function () { myFunction() };
 
@@ -230,6 +145,28 @@
         postbtn.src = "assets/Asset 2Icons.png"
         postbox.id = color;
         postbox.style.display = "initial";
+        let btn = document.getElementById('postbtn');
+        btn.addEventListener('click', function()
+        {
+            var title = document.getElementById("textareahead");
+            var txt = document.getElementById("textareabody");
+            var post = {
+                title: title.value,
+                text: txt.value,
+                author: "Anonymous",
+                color: color,
+                timestamp: Date.now().toLocaleString()
+            }
+            addPost(post);
+        }
+        )
+    }
+
+    function closeelements(){
+        document.getElementById("purpleico").style.display="none";
+        document.getElementById("pinkico").style.display="none";
+        document.getElementById("blueico").style.display="none";
+        document.getElementById("yellowico").style.display="none";
     }
 </script>
 
